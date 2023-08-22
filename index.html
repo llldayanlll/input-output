@@ -7,11 +7,15 @@
     <label for="data">Enter Data:</label>
     <input type="text" id="data">
     <button onclick="saveData()">Save Data</button>
+    <button onclick="viewOutput()">View Output</button>
 
     <script>
         function saveData() {
             var inputData = document.getElementById("data").value;
             localStorage.setItem("savedData", inputData);
+        }
+
+        function viewOutput() {
             window.location.href = "output.html";
         }
     </script>
