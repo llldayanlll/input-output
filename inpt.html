@@ -6,13 +6,14 @@
 <body>
     <label for="data">Enter Data:</label>
     <input type="text" id="data">
-    <button onclick="saveData()">Save Data</button>
+    <button onclick="saveAndNavigate()">Save Data</button>
     <button onclick="viewOutput()">View Output</button>
 
     <script>
-        function saveData() {
+        function saveAndNavigate() {
             var inputData = document.getElementById("data").value;
             localStorage.setItem("savedData", inputData);
+            viewOutput();
         }
 
         function viewOutput() {
